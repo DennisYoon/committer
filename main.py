@@ -19,6 +19,8 @@ for i in range(n, n + repeat, 1):
   pushingStr = string(i, datetime.now())
   with open("README.md", "w") as f:
     f.write(pushingStr)
+  exe("git add README.md")
+  exe("git commit -m\"{}th commit\"".format(i))
   sleep(term)
 
 with open("n.txt", "w") as f:
